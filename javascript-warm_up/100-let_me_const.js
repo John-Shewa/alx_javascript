@@ -9,4 +9,3 @@ function myVar() {
 var newVar = myVar.bind({
     oldVar: 333
 });
-console.log(newVar.oldVar);
