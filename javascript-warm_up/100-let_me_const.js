@@ -1,11 +1,7 @@
 #!/usr/bin/node
-function myVar() {
-  var oldVar = 89;
-  return {
-    oldVar: oldVar
-  };
+function let_me_const(){
+    global.myVar = 333;
 }
 
-var newVar = myVar.bind({
-    oldVar: 333
-});
+let_me_const();
+console.log(myVar);
