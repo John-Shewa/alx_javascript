@@ -1,12 +1,12 @@
 #!/usr/bin/node
-exports.let_me_const = function (myVar) {
-  var myVar = 89;
+function myVar() {
+  var oldVar = 89;
   return {
-    myVar: myVar
+    oldVar: oldVar
   };
 }
 
-var newVar = let_me_const.bind({
-    myVar: 333
+var newVar = myVar.bind({
+    oldVar: 333
 });
-console.log(newVar.myVar);
+console.log(newVar.oldVar);
