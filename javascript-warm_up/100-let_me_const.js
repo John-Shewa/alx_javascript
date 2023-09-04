@@ -4,4 +4,3 @@ function let_me_const(){
 }
 
 let_me_const();
-console.log(myVar);
