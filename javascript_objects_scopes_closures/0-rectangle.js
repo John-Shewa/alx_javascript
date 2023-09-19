@@ -5,4 +5,4 @@ class Rectangle {
         this.w = w;
     }
 }
-const rectangle = new Rectangle(h, w);
+const rectangle = new Rectangle(2, 4);
