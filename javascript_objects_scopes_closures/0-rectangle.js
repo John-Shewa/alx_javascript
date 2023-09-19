@@ -5,4 +5,4 @@ class Rectangle {
         this.w = w;
     }
 };
-const r1 = new Rectangle();
+const r1 = new Rectangle.constructor();
