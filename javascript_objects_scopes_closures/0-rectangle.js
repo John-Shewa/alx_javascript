@@ -1,8 +1,7 @@
 #!/usr/bin/node
-class Rectangle {
+const Rectangle = class {
     constructor(h, w) {
         this.h = h;
         this.w = w;
     }
-}
-const rectangle = new Rectangle.constructor(h, w);
+};
