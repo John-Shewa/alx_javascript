@@ -9,11 +9,11 @@ module.exports = class Rectangle{
         for (let i = 0; i < this.height; i++) console.log("X".repeat(this.width));
         }
     rotate() {
-        this.width = h;
-        this.height = w;
+        this.width = this.height;
+        this.height = this.weight;
     }
     double() {
-        this.width = w * 2;
-        this.height = h * 2;
+        this.width = this.width * 2;
+        this.height = this.height * 2;
     }
 };
