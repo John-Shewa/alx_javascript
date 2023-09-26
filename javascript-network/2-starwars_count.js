@@ -4,7 +4,7 @@ const request = require('request');
 
 const url = `https://swapi-api.alx-tools.com/api/films/`;
 
-fetch(url).then(response => response.json())
+request(url).then(response => response.json())
 .then(films => {
 
     const numoffilms = films.filter(film => film.characters.includes(18)).length;
