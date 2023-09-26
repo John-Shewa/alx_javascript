@@ -20,3 +20,5 @@ for (let result of output.results) {
         count++;
     }
 }
+console.log(count);
+});
