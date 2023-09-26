@@ -2,11 +2,21 @@
 
 const request = require('request');
 
-const url = `https://swapi-api.alx-tools.com/api/films/`;
+const url = process.argv[2];
+const char_id = 18;
 
-request(url).then(function(response) {
-    const films = JSON.parse(response.body).results;
+request(url, (error, response, body) => {
+    if (error) {
+        console.error(error);
+        return;
+    }
 
-    const numoffilms = films.filter(film => film.characters.includes(18)).length;
-    console.log(`${numoffilms}`);
-});
+const output = JSON.parse(body);
+
+let count = 0;
+
+for (let result of output.results) {
+    if (result.characters.some((url) => url.endswith(`${char_id}/`))) {
+        count++;
+    }
+}
