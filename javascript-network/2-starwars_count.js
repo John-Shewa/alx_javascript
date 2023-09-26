@@ -2,20 +2,11 @@
 
 const request = require('request');
 
-const url = procee.argv[2];
+const url = `https://swapi-api.alx-tools.com/api/films/`;
 
-request.get(url, (error, response, body)=>{
-    if(!error && response.statusCode == 200){
-        const movies = JSON.parse(body);
-        let counter = 0;
-        movies.resluts.Foreach(movie) =>{
-            movie.characters.forEach((actor) => {
-                const list_film = actor.split('/');
-                if(list_film[list_film.length-2] == 18) {
-                    counter++;
-                }
-            })
-        }
-            console.log(counter);
-    }
-});
+request(url).then(function(response)){
+    const films = JSON.parse(response.body).results;
+
+    const numoffilms = films.filter(film => film.characters.includes(18)).length;
+    console.log(`${numoffilms}`);
+}
