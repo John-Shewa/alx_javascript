@@ -23,7 +23,7 @@
             var expires = new Date();
             expires.setDate(expires.getDate() + 10);
 
-            document.cookie = "firstname=" + firstname;
+            document.cookie = "firstname=" + firstname + "expires=" + expires.toUTCString();
             document.cookie = "email=" + email;
         }
 
